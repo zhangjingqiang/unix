@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+      <title>Unix</title>
+      <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css" />
+      <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap-responsive.css" />
+      <link rel="stylesheet" type="text/css" href="stylesheets/unicorn.main.css" />
+      <link rel="stylesheet" type="text/css" href="stylesheets/unicorn.grey.css" />
+      <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+      <script charset="UTF-8" type="text/javascript" src="javascripts/bootstrap.js"></script>
+      <script type="text/javascript">
+        // popover
+        $(function() {
+          $('a[rel=popover]').popover();
+        });
+        // Google Analytics
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36966415-1']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+  </head>
+  <body>
+      <div id="content">
+        <div id="content-header">
+          <h1>Unix</h1>
+          <div class="btn-group" style="width: auto;">
+            <!-- Twitter -->
+            <a class="btn btn-large tip-bottom" href="<%= @twitter %>" rel="popover" data-placement="left" data-trigger="hover" data-original-title="Twitter" data-content="<%= @twitter %>">Twitter</a>
+            <!-- Facebook -->
+            <a class="btn btn-large tip-bottom" href="<%= @facebook %>" rel="popover" data-placement="left" data-trigger="hover" data-original-title="Facebook" data-content="<%= @facebook %>">Facebook</a>
+            <!-- Google+ -->
+            <a class="btn btn-large tip-bottom" href="<%= @google_plus %>" rel="popover" data-placement="left" data-trigger="hover" data-original-title="Google+" data-content="<%= @google_plus %>">Google+<span class="label label-important">1</span></a>
+            <!-- Github -->
+            <a class="btn btn-large tip-bottom" href="<%= @github %>" rel="popover" data-placement="left" data-trigger="hover" data-original-title="Github" data-content="<%= @github %>">Github</a>
+          </div>
+        </div>
+        <div id="breadcrumb">
+          <a href="#" class="tip-bottom" data-original-title="Go to Home"><i class="icon-home"></i> Home</a>
+        </div>
+        <div class="container-fluid">
+          <div class="row-fluid">
+            <!-- FreeBSD -->
+            <div class="span4">
+              <div class="widget-box">
+                <div class="widget-title">
+                  <span class="icon">
+                    <i class="icon-th-list"></i>
+                  </span>
+                  <h5>
+                    <a href="<%= @freebsd %>" rel="popover" data-placement="right" data-trigger="hover" data-original-title="FreeBSD" data-content="<%= @freebsd %>">FreeBSD</a>
+                  </h5>
+                </div>
+                <div class="widget-content">
+                  <% @contentFreeBSD[:site_text].size.times do |i| %>
+                    <div class="alert alert-info">
+                      <div>
+                        <a href="<%= @google + @contentFreeBSD[:site_href][i] %>">
+                          <%= @contentFreeBSD[:site_text][i] %>
+                        </a>
+                      </div>
+                      <div>
+                        <%= @contentFreeBSD[:description][i] %>
+                      </div>
+                    </div>
+                  <% end %>
+                  <div class="alert alert-success" style="text-align:center;">
+                    <%= link_to "More...", "#{@google_search}FreeBSD", :target => "_blank" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- OpenBSD -->
+            <div class="span4">
+              <div class="widget-box">
+                <div class="widget-title">
+                  <span class="icon">
+                    <i class="icon-th-list"></i>
+                  </span>
+                  <h5>
+                    <a href="<%= @openbsd %>" rel="popover" data-placement="right" data-trigger="hover" data-original-title="OpenBSD" data-content="<%= @openbsd %>">OpenBSD</a>
+                  </h5>
+                </div>
+                <div class="widget-content">
+                  <% @contentOpenBSD[:site_text].size.times do |i| %>
+                    <div class="alert alert-info">
+                      <div>
+                        <a href="<%= @google + @contentOpenBSD[:site_href][i] %>">
+                          <%= @contentOpenBSD[:site_text][i] %>
+                        </a>
+                      </div>
+                      <div>
+                        <%= @contentOpenBSD[:description][i] %>
+                      </div>
+                    </div>
+                  <% end %>
+                  <div class="alert alert-success" style="text-align:center;">
+                    <%= link_to "More...", "#{@google_search}OpenBSD", :target => "_blank" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- NetBSD -->
+            <div class="span4">
+              <div class="widget-box">
+                <div class="widget-title">
+                  <span class="icon">
+                    <i class="icon-th-list"></i>
+                  </span>
+                  <h5>
+                    <a href="<%= @netbsd %>" rel="popover" data-placement="right" data-trigger="hover" data-original-title="NetBSD" data-content="<%= @netbsd %>">NetBSD</a>
+                  </h5>
+                </div>
+                <div class="widget-content">
+                  <% @contentNetBSD[:site_text].size.times do |i| %>
+                    <div class="alert alert-info">
+                      <div>
+                        <a href="<%= @google + @contentNetBSD[:site_href][i] %>">
+                          <%= @contentNetBSD[:site_text][i] %>
+                        </a>
+                      </div>
+                      <div>
+                        <%= @contentNetBSD[:description][i] %>
+                      </div>
+                    </div>
+                  <% end %>
+                  <div class="alert alert-success" style="text-align:center;">
+                    <%= link_to "More...", "#{@google_search}NetBSD", :target => "_blank" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row-fluid">
+            <div id="footer" class="span12">
+              2012 © 
+              <a href="<%= @about_me %>" rel="popover" data-placement="top" data-trigger="hover" data-original-title="zhangjingqiang" data-content="<%= @about_me %>">zhangjingqiang</a>
+              Powered by 
+              <a href="<%= @sinatra %>" rel="popover" data-placement="top" data-trigger="hover" data-original-title="Sinatra" data-content="<%= @sinatra %>">Sinatra</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
