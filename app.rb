@@ -1,5 +1,5 @@
 require "sinatra"
-require 'open-uri'
+require "open-uri"
 
 set :raise_errors, false
 set :show_exceptions, false
