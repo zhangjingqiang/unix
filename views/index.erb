@@ -31,13 +31,13 @@
           <h1>Unix</h1>
           <div class="btn-group" style="width: auto;">
             <!-- Twitter -->
-            <a class="btn btn-large tip-bottom" href="<%= @twitter %>" rel="popover" data-placement="left" data-trigger="hover" data-original-title="Twitter" data-content="<%= @twitter %>">Twitter</a>
+            <a class="btn btn-large tip-bottom" href="<%= ENV['TWITTER'] %>" rel="popover" data-placement="left" data-trigger="hover" data-original-title="Twitter" data-content="<%= ENV['TWITTER'] %>">Twitter</a>
             <!-- Facebook -->
-            <a class="btn btn-large tip-bottom" href="<%= @facebook %>" rel="popover" data-placement="left" data-trigger="hover" data-original-title="Facebook" data-content="<%= @facebook %>">Facebook</a>
+            <a class="btn btn-large tip-bottom" href="<%= ENV['FACEBOOK'] %>" rel="popover" data-placement="left" data-trigger="hover" data-original-title="Facebook" data-content="<%= ENV['FACEBOOK'] %>">Facebook</a>
             <!-- Google+ -->
-            <a class="btn btn-large tip-bottom" href="<%= @google_plus %>" rel="popover" data-placement="left" data-trigger="hover" data-original-title="Google+" data-content="<%= @google_plus %>">Google+<span class="label label-important">1</span></a>
+            <a class="btn btn-large tip-bottom" href="<%= ENV['GOOGLE_PLUS'] %>" rel="popover" data-placement="left" data-trigger="hover" data-original-title="Google+" data-content="<%= ENV['GOOGLE_PLUS'] %>">Google+<span class="label label-important">1</span></a>
             <!-- Github -->
-            <a class="btn btn-large tip-bottom" href="<%= @github %>" rel="popover" data-placement="left" data-trigger="hover" data-original-title="Github" data-content="<%= @github %>">Github</a>
+            <a class="btn btn-large tip-bottom" href="<%= ENV['GITHUB'] %>" rel="popover" data-placement="left" data-trigger="hover" data-original-title="Github" data-content="<%= ENV['GITHUB'] %>">Github</a>
           </div>
         </div>
         <div id="breadcrumb">
@@ -53,7 +53,7 @@
                     <i class="icon-th-list"></i>
                   </span>
                   <h5>
-                    <a href="<%= @freebsd %>" rel="popover" data-placement="right" data-trigger="hover" data-original-title="FreeBSD" data-content="<%= @freebsd %>">FreeBSD</a>
+                    <a href="http://www.freebsd.org" rel="popover" data-placement="right" data-trigger="hover" data-original-title="FreeBSD" data-content="http://www.freebsd.org">FreeBSD</a>
                   </h5>
                 </div>
                 <div class="widget-content">
@@ -83,7 +83,7 @@
                     <i class="icon-th-list"></i>
                   </span>
                   <h5>
-                    <a href="<%= @openbsd %>" rel="popover" data-placement="right" data-trigger="hover" data-original-title="OpenBSD" data-content="<%= @openbsd %>">OpenBSD</a>
+                    <a href="http://www.openbsd.org" rel="popover" data-placement="right" data-trigger="hover" data-original-title="OpenBSD" data-content="http://www.openbsd.org">OpenBSD</a>
                   </h5>
                 </div>
                 <div class="widget-content">
@@ -113,7 +113,7 @@
                     <i class="icon-th-list"></i>
                   </span>
                   <h5>
-                    <a href="<%= @netbsd %>" rel="popover" data-placement="right" data-trigger="hover" data-original-title="NetBSD" data-content="<%= @netbsd %>">NetBSD</a>
+                    <a href="http://www.netbsd.org" rel="popover" data-placement="right" data-trigger="hover" data-original-title="NetBSD" data-content="http://www.netbsd.org">NetBSD</a>
                   </h5>
                 </div>
                 <div class="widget-content">
@@ -139,9 +139,9 @@
           <div class="row-fluid">
             <div id="footer" class="span12">
               2012 © 
-              <a href="<%= @about_me %>" rel="popover" data-placement="top" data-trigger="hover" data-original-title="zhangjingqiang" data-content="<%= @about_me %>">zhangjingqiang</a>
+              <a href="<%= ENV['ABOUT_ME'] %>" rel="popover" data-placement="top" data-trigger="hover" data-original-title="zhangjingqiang" data-content="<%= ENV['ABOUT_ME'] %>">zhangjingqiang</a>
               Powered by 
-              <a href="<%= @sinatra %>" rel="popover" data-placement="top" data-trigger="hover" data-original-title="Sinatra" data-content="<%= @sinatra %>">Sinatra</a>
+              <a href="http://sinatrarb.com" rel="popover" data-placement="top" data-trigger="hover" data-original-title="Sinatra" data-content="http://sinatrarb.com">Sinatra</a>
             </div>
           </div>
         </div>
